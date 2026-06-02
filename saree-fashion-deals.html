@@ -102,6 +102,105 @@
 }
 
 </style>
+
+<style>
+/* FINAL BEST FIX: clean header, no logo/menu overlap, stronger responsive layout */
+@media(min-width:921px){
+  .topbar-inner{
+    grid-template-columns:170px minmax(0,1fr) !important;
+    overflow:hidden !important;
+  }
+  .top-links{
+    animation:none !important;
+    transform:none !important;
+    overflow-x:auto !important;
+    scrollbar-width:none !important;
+    min-width:0 !important;
+    width:100% !important;
+    padding:4px 0 !important;
+  }
+  .top-links::-webkit-scrollbar{display:none;}
+}
+@media(max-width:920px){
+  .topbar-inner{
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+    overflow:hidden !important;
+  }
+  .logo{
+    width:max-content !important;
+    max-width:100% !important;
+  }
+  .top-links{
+    width:max-content !important;
+    min-width:max-content !important;
+    overflow:visible !important;
+    animation:menuRun 26s linear infinite !important;
+    padding:3px 0 5px !important;
+  }
+  .top-links:hover,
+  .top-links:focus-within,
+  .top-links:active{
+    animation-play-state:paused !important;
+  }
+}
+
+/* FINAL BEST FIX: better product image visibility and equal card bottoms */
+.products{
+  align-items:stretch !important;
+}
+.product-card{
+  display:flex !important;
+  flex-direction:column !important;
+  height:100% !important;
+}
+.product-card.is-hidden{
+  display:none !important;
+}
+.product-media{
+  flex:0 0 auto !important;
+}
+.landscape{
+  aspect-ratio:4/3 !important;
+  background:#fff !important;
+}
+.landscape img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center top !important;
+  background:#fff !important;
+}
+.swatches{
+  flex:0 0 auto !important;
+}
+.product-info{
+  flex:1 1 auto !important;
+  display:flex !important;
+  flex-direction:column !important;
+}
+.product-title{
+  min-height:62px !important;
+}
+.rating{min-height:18px !important;}
+.price-line{min-height:31px !important;}
+.save{min-height:34px !important;}
+.delivery{min-height:50px !important;}
+.shop-btn{margin-top:auto !important;}
+
+@media(max-width:920px){
+  .landscape{aspect-ratio:1/1 !important;}
+  .product-title{min-height:50px !important;}
+  .rating{min-height:16px !important;}
+  .price-line{min-height:26px !important;}
+  .save{min-height:42px !important;}
+  .delivery{min-height:58px !important;}
+}
+@media(max-width:360px){
+  .delivery{min-height:66px !important;}
+}
+</style>
+
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner"><a class="logo" href="index.html">Associates</a><nav class="top-links"><a href="index.html">Today’s Deals</a><a href="#sarees">Saree Deals</a><a href="#ethnic">Ethnic Wear</a><a href="#fashion">Women Fashion</a><a href="#men">Men Fashion</a><a href="#kids">Kids Picks</a><a href="#daily">Daily Essentials</a><a href="index.html">Member Benefits</a><a href="index.html">Today’s Deals</a><a href="#sarees">Saree Deals</a><a href="#ethnic">Ethnic Wear</a></nav></div></header>
@@ -254,10 +353,89 @@
 <footer class="footer"><div class="footer-inner"><strong>Affiliate Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases. This page may contain affiliate links. We may earn a commission at no extra cost to you. Final price, discount, availability, coupons, delivery and eligibility depend on partner-store terms. This is an independent affiliate deals page and not an official store website.</div></footer>
 <script>
 window.__FALLBACK_PRODUCTS__ = [{"id": "tavasya-block-printed-chiffon-georgette-saree", "title": "Amazon Brand - Tavasya Blocked Printed Daily Wear Chiffon Georgette Saree With Blouse", "image": "https://m.media-amazon.com/images/I/813hruE1vKL._AC_UL320_.jpg", "link": "https://amzn.openinapp.co/pnrqj", "button": "View Tavasya Saree", "badges": ["Wardrobe Refresh Sale", "Chiffon Saree"], "rating": "★★★★★ 5.0", "reviews": "(9)", "price": "639", "mrp": "₹1,699", "save": "62% off", "delivery": "FREE delivery Fri, 5 Jun", "imageClass": "landscape saree-photo", "swatches": ["#0f8b8d", "#d9e4e6", "#222", "#7a3e2c"]}, {"id": "yashika-bollywood-soft-tissue-silk-saree", "title": "Yashika Women's New Bollywood Soft Tissue Silk Saree With Blouse Material | Saree for Women | New Sari | Latest Saree", "image": "https://m.media-amazon.com/images/I/71aHjRz+3iL._AC_UL320_.jpg", "link": "https://amzn.openinapp.co/vjmsy", "button": "View Tissue Silk Saree", "badges": ["Wardrobe Refresh Sale", "Tissue Silk"], "rating": "★★★★☆ 4.2", "reviews": "(68)", "price": "539", "mrp": "", "save": "70% savings", "delivery": "Latest price, offer and availability Amazon par check karein.", "imageClass": "landscape saree-photo", "swatches": ["#ec4899", "#d9e4e6", "#222", "#6b6b45"]}, {"id": "siril-tissue-silk-sequence-embroidery-saree", "title": "SIRIL Women's Tissue Silk Sequence Embroidery Saree With Unstitched Blouse Piece", "image": "https://m.media-amazon.com/images/I/71J5qbBTCpL._SX385_.jpg", "link": "https://amzn.openinapp.co/vjmsy", "button": "View SIRIL Saree", "badges": ["Wardrobe Refresh Sale", "Embroidery"], "rating": "★★★☆☆ 3.7", "reviews": "(17)", "price": "1,605", "mrp": "", "save": "78% savings", "delivery": "Latest price, offer and availability Amazon par check karein.", "imageClass": "landscape saree-photo", "swatches": ["#f97316", "#d9e4e6", "#222", "#8b5cf6"]}, {"id": "db-desh-bidesh-handloom-cotton-saree", "title": "dB DESH BIDESH Women`s handloom cotton saree for woman silk georgette daily wear latest soft linen cotton sarees for women new collection farewell mul cotton saree with unstitched blouse", "image": "https://m.media-amazon.com/images/I/71P5fo8DwPL._SY679_.jpg", "link": "https://amzn.openinapp.co/qtl3m", "button": "View Handloom Cotton Saree", "badges": ["Cotton Saree", "Daily Wear"], "rating": "★★★☆☆ 3.6", "reviews": "(73)", "price": "", "mrp": "", "save": "Soft linen cotton saree style pick", "delivery": "Latest price, offer and availability Amazon par check karein.", "imageClass": "landscape saree-photo", "swatches": ["#8b4513", "#d9e4e6", "#222", "#6b6b45"]}, {"id": "akhilam-organza-ethnic-motif-saree", "title": "AKHILAM Women's Organza Ethnic Motif Woven Design Saree With Unstitched Blouse Piece", "image": "https://m.media-amazon.com/images/I/71uTXrOokrL._SY679_.jpg", "link": "https://amzn.openinapp.co/am94h", "button": "View Organza Saree", "badges": ["Wardrobe Refresh Sale", "Organza"], "rating": "★★★★☆ 4.0", "reviews": "(402)", "price": "849", "mrp": "₹3,499", "save": "76% savings | Apply 5% coupon", "delivery": "Fulfilled | Inclusive of all taxes", "imageClass": "landscape saree-photo", "swatches": ["#f4c7ce", "#d9e4e6", "#222", "#6b6b45"]}, {"id": "anveshan-a2-gir-cow-ghee-5l", "title": "Anveshan A2 Gir Cow Ghee - 5L Stainless Steel Dolchi | Traditional Bilona Method | Curd-Churned & Cultured | Pure, Healthy & Keto Friendly | NABL Lab Tested", "image": "https://m.media-amazon.com/images/I/71fx0jCNirL._SL1500_.jpg", "link": "https://amzn.openinapp.co/4k19l", "button": "View A2 Ghee on Amazon", "badges": ["Daily Essentials", "A2 Cow Ghee"], "rating": "★★★★☆ 4.2", "reviews": "(1,517)", "price": "8,999", "mrp": "₹11,225", "save": "300+ bought in past month | 20% savings | Apply ₹500 coupon", "delivery": "Latest price, offer and availability Amazon par check karein.", "imageClass": "landscape saree-photo", "swatches": ["#f59e0b", "#d9e4e6", "#222", "#6b6b45"]}, {"id": "womens-fashion-on-amazon-banner", "title": "Women’s Fashion on Amazon", "image": "https://m.media-amazon.com/images/G/31/IMG25/Fashion/BAU/Flip/Serve/Grecilooks_382x599._CB798872528_.png", "link": "https://amzn.openinapp.co/0qm17", "button": "Women’s Fashion on Amazon", "badges": ["Women’s Fashion", "Amazon Picks"], "rating": "", "reviews": "", "price": "", "mrp": "", "save": "Explore latest women fashion launches", "delivery": "Latest women’s fashion styles, offers and availability Amazon par check karein.", "imageClass": "landscape saree-photo", "swatches": ["#ec4899", "#d9e4e6", "#222", "#6b6b45"]}, {"id": "mens-fashion-on-amazon", "title": "Men’s Fashion on Amazon", "image": "https://m.media-amazon.com/images/G/31/IMG25/Fashion/BAU/Flip/Serve/Bewakoof_382x599._CB798872528_.png", "link": "https://amzn.openinapp.co/icril", "button": "Men’s Fashion on Amazon", "badges": ["Men’s Fashion", "Amazon Picks"], "rating": "", "reviews": "", "price": "", "mrp": "", "save": "Explore men fashion new arrivals and deals", "delivery": "Latest men’s fashion styles, offers and availability Amazon par check karein.", "imageClass": "landscape saree-photo", "swatches": ["#0f4c5c", "#d9e4e6", "#222", "#6b6b45"]}, {"id": "klosia-women-embroidery-kurta-pant-dupatta-set", "title": "Klosia Women Solid Embroidery Kurta and Pant Set With Dupatta", "image": "https://m.media-amazon.com/images/I/41KIAExIjWL._SY606_.jpg", "link": "https://amzn.openinapp.co/ua407", "button": "View Kurta Set on Amazon", "badges": ["Wardrobe Refresh Sale", "Kurta Set"], "rating": "★★★★☆ 4.1", "reviews": "(668)", "price": "775", "mrp": "₹2,999", "save": "100+ bought in past month | 74% savings", "delivery": "Latest price, offer and availability Amazon par check karein.", "imageClass": "landscape saree-photo", "swatches": ["#0f766e", "#d9e4e6", "#222", "#7c2d12"]}, {"id": "kids-on-amazon-luggage-picks", "title": "Kids on Amazon", "image": "https://m.media-amazon.com/images/G/31/img21/Luggage/2026/January/2PC._CB784388369_UC343,180_.png", "link": "https://amzn.openinapp.co/y25rg", "button": "Kids on Amazon", "badges": ["Kids Picks", "Amazon Deals"], "rating": "★★★★☆", "reviews": "Check details", "price": "", "mrp": "", "save": "Latest kids picks and offers", "delivery": "Latest price, offer and availability Amazon par check karein.", "imageClass": "landscape banner", "swatches": ["#f4c7ce", "#d9e4e6", "#222", "#6b6b45"]}];
-function cleanTitle(t){return (t||'').replace('Amazon Brand - ','').replace(/ on Amazon/g,' Deals').replace(/\| Saree for Women \| New Sari \| Latest Saree/g,' Saree for Women').replace(/\s+/g,' ').trim();}
-function filterCards(){const q=(document.getElementById('searchInput').value||'').toLowerCase().trim();document.querySelectorAll('.product-card').forEach(card=>{const hay=(card.dataset.title+' '+card.dataset.badges).toLowerCase();card.style.display=!q||hay.includes(q)?'block':'none';});}
-document.getElementById('topSearchForm').addEventListener('submit',function(e){e.preventDefault();filterCards();});
-document.getElementById('searchInput').addEventListener('input',filterCards);
+
+function safeText(value){
+  return String(value ?? '').replace(/[&<>"']/g, function(ch){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch];
+  });
+}
+function cleanTitle(t){
+  return (t||'')
+    .replace(/^Amazon Brand\s*-\s*/i,'')
+    .replace(/\s+on Amazon/gi,' Deals')
+    .replace(/\|\s*Saree for Women\s*\|\s*New Sari\s*\|\s*Latest Saree/gi,' Saree for Women')
+    .replace(/\s+/g,' ')
+    .trim();
+}
+function cleanLabel(t){
+  return (t||'')
+    .replace(/Amazon Picks/gi,'Partner Picks')
+    .replace(/Amazon Deals/gi,'Partner Deals')
+    .replace(/\s+on Amazon/gi,' Deals')
+    .replace(/Amazon par/gi,'partner store par')
+    .trim();
+}
+function cardHTML(item, index){
+  const title = cleanTitle(item.title || 'Product Deal');
+  const link = item.link || '#';
+  const img = item.image || '';
+  const badges = (item.badges || []).map((b,i)=>`<span class="badge ${i===1?'orange':''}">${safeText(cleanLabel(b))}</span>`).join('');
+  const swatches = (item.swatches && item.swatches.length ? item.swatches : ['#0f8b8d','#d9e4e6','#222','#6b6b45']).map(s=>`<span class="swatch" style="background:${safeText(s)}"></span>`).join('');
+  const rating = item.rating ? `<div class="rating">${safeText(item.rating)} ${item.reviews ? `<span>${safeText(item.reviews)}</span>` : ''}</div>` : `<div class="rating"></div>`;
+  const price = item.price ? `<div class="price-line"><span class="rupee">₹</span><span class="price">${safeText(item.price)}</span> ${item.mrp ? `<span class="mrp">M.R.P: <s>${safeText(item.mrp)}</s></span>` : ''}</div>` : `<div class="price-line"></div>`;
+  const save = `<div class="save">${safeText(cleanLabel(item.save || ''))}</div>`;
+  const delivery = `<div class="delivery">${safeText(cleanLabel(item.delivery || 'Latest price, offer and availability partner store par check karein.'))}</div>`;
+  const button = safeText(cleanLabel((item.button || 'View Deal').replace(/View .* on Amazon/gi,'View Deal')));
+  const id = item.id ? ` id="${safeText(item.id)}"` : '';
+  const dataTitle = safeText((title + ' ' + (item.badges || []).join(' ')).toLowerCase());
+  return `<article class="product-card"${id} data-title="${dataTitle}" data-badges="${safeText((item.badges || []).join(' ').toLowerCase())}">
+      <a class="product-media" href="${safeText(link)}" target="_blank" rel="sponsored nofollow noopener">
+        <div class="landscape"><img src="${safeText(img)}" alt="${safeText(title)}" loading="${index===0?'eager':'lazy'}"></div>
+      </a>
+      <div class="swatches">${swatches}</div>
+      <div class="product-info">
+        <div class="badges">${badges}</div>
+        <h2 class="product-title">${safeText(title)}</h2>
+        ${rating}
+        ${price}
+        ${save}
+        ${delivery}
+        <a class="shop-btn" href="${safeText(link)}" target="_blank" rel="sponsored nofollow noopener">${button}</a>
+      </div>
+    </article>`;
+}
+function renderProducts(products){
+  const grid = document.getElementById('productGrid');
+  if(!grid || !Array.isArray(products) || !products.length) return;
+  grid.innerHTML = products.map(cardHTML).join('');
+  const count = document.getElementById('countText');
+  if(count) count.textContent = products.length + ' products';
+  filterCards();
+}
+function filterCards(){
+  const input = document.getElementById('searchInput');
+  const q=(input ? input.value : '').toLowerCase().trim();
+  let visible = 0;
+  document.querySelectorAll('.product-card').forEach(card=>{
+    const hay=((card.dataset.title||'')+' '+(card.dataset.badges||'')).toLowerCase();
+    const show=!q||hay.includes(q);
+    card.classList.toggle('is-hidden', !show);
+    if(show) visible++;
+  });
+  const count = document.getElementById('countText');
+  if(count && q) count.textContent = visible + ' products';
+  else if(count) count.textContent = document.querySelectorAll('.product-card').length + ' products';
+}
+const form = document.getElementById('topSearchForm');
+const input = document.getElementById('searchInput');
+if(form){ form.addEventListener('submit',function(e){e.preventDefault();filterCards();}); }
+if(input){ input.addEventListener('input',filterCards); }
+
+/* Keep static HTML for SEO, but update live page from products.json whenever GitHub JSON changes */
+fetch('products.json', {cache:'no-store'})
+  .then(r => r.ok ? r.json() : Promise.reject(new Error('products.json not found')))
+  .then(products => renderProducts(products))
+  .catch(() => filterCards());
 </script>
 </body>
 </html>
