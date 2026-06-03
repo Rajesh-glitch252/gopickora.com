@@ -1581,6 +1581,8 @@ html, body{
     const title = escapeHtml(item.title || 'Fashion Pick');
     const link = escapeHtml(item.link || '#');
     const image = escapeHtml(item.image || '');
+    const rotateImages = Array.isArray(item.images) && item.images.length > 1 ? item.images : [];
+    const rotateAttr = rotateImages.length ? " data-rotate-images='" + escapeHtml(JSON.stringify(rotateImages)) + "'" : "";
     const imageClass = escapeHtml(item.imageClass || 'landscape saree-photo');
     const cardId = item.id ? ' id="' + escapeHtml(item.id) + '"' : '';
     const rating = item.rating ? '<div class="rating">' + escapeHtml(item.rating) + (item.reviews ? ' <span>' + escapeHtml(item.reviews) + '</span>' : '') + '</div>' : '';
@@ -1593,7 +1595,7 @@ html, body{
 <article class="product-card"${cardId}>
   <a class="product-media" href="${link}" rel="nofollow sponsored noopener" target="_blank">
     <div class="${imageClass}">
-      <img alt="${title}" loading="${loading}" src="${image}">
+      <img alt="${title}" loading="${loading}" src="${image}"${rotateAttr}>
     </div>
   </a>
   <div class="swatches">${renderSwatches(item.swatches)}</div>
@@ -1616,6 +1618,20 @@ html, body{
     })
     .then(function(products){
       grid.innerHTML = (products || []).map(renderCard).join('');
+      grid.querySelectorAll("img[data-rotate-images]").forEach(function(img){
+        let images = [];
+        try {
+          images = JSON.parse(img.getAttribute("data-rotate-images") || "[]");
+        } catch(e) {
+          images = [];
+        }
+        if (!images || images.length < 2) return;
+        let current = 0;
+        setInterval(function(){
+          current = (current + 1) % images.length;
+          img.src = images[current];
+        }, 2500);
+      });
     })
     .catch(function(error){
       console.error('Products load error:', error);
