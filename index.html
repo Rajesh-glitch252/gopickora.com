@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta content="81807b4d80a1aa454ac222fb5ca1172e" name="p:domain_verify"/>
@@ -23,10 +24,10 @@
 <script>
 !function(e){if(!window.pintrk){window.pintrk = function () {
 window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
- n=window.pintrk;n.queue=[],n.version="3.0";var
- t=document.createElement("script");t.async=!0,t.src=e;var
- r=document.getElementsByTagName("script")[0];
- r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+  n=window.pintrk;n.queue=[],n.version="3.0";var
+  t=document.createElement("script");t.async=!0,t.src=e;var
+  r=document.getElementsByTagName("script")[0];
+  r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
 pintrk('load', '2614109136292');
 pintrk('page');
 </script>
@@ -509,7 +510,7 @@ img{display:block;max-width:100%}
   height:100%;
   object-fit:cover;
 }
-.landscape.product collapse{
+.landscape.product{
   background:linear-gradient(135deg,#f5f5f5,#fff,#fff3cc);
   position:relative;
 }
@@ -633,6 +634,9 @@ img{display:block;max-width:100%}
   padding:10px 0;
   animation:rightLeft 22s linear infinite;
 }
+.brand-track:hover{
+  animation-play-state:paused;
+}
 .brand-track a{
   border:1px solid #ddd;
   background:#f7f7f7;
@@ -693,7 +697,7 @@ img{display:block;max-width:100%}
   border-radius:8px;
 }
 
-/* MOBILE AREA CSS */
+/* MOBILE */
 @media(max-width:920px){
   .header-main{
     grid-template-columns:118px 1fr 64px;
@@ -752,6 +756,458 @@ img{display:block;max-width:100%}
   .main-head{
     display:block;
     margin-bottom:8px;
+  }
+  .main-head h1{
+    font-size:22px;
+  }
+  .products{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .product-card{
+    border-radius:8px;
+  }
+  .product-card.mobile-feature{
+    border:2px solid #ff9900;
+  }
+  .landscape{
+    aspect-ratio:16/9;
+  }
+  .product-title{
+    font-size:17px;
+    font-weight:600;
+  }
+  .shop-btn{
+    min-height:40px;
+    font-size:14px;
+  }
+  .seo-section{
+    grid-template-columns:1fr;
+  }
+}
+@media(min-width:1180px){
+  .products{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+@media(min-width:1360px){
+  .products{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+}
+
+.top-deal-btn{
+  justify-self:end;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:0 14px;
+  border-radius:20px;
+  background:linear-gradient(#ffd814,#f7ca00);
+  border:1px solid #f2c200;
+  color:#111;
+  font-size:13px;
+  font-weight:900;
+  white-space:nowrap;
+}
+.sort-menu{
+  position:relative;
+  min-width:170px;
+  z-index:50;
+}
+.sort-menu summary{
+  list-style:none;
+  cursor:pointer;
+  border:1px solid #bbb;
+  border-radius:7px;
+  padding:7px 10px;
+  font-size:13px;
+  background:#f8f8f8;
+  color:#111;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  user-select:none;
+}
+.sort-menu summary::-webkit-details-marker{display:none}
+.sort-list{
+  position:absolute;
+  right:0;
+  top:calc(100% + 3px);
+  width:190px;
+  background:#fff;
+  border:1px solid #a6a6a6;
+  border-radius:4px;
+  box-shadow:0 8px 22px rgba(0,0,0,.18);
+  overflow:hidden;
+}
+.sort-list a{
+  display:block;
+  padding:8px 12px;
+  color:#111;
+  font-size:14px;
+  border-bottom:1px solid #e7e7e7;
+}
+.sort-list a:hover{
+  background:#e7f3ff;
+  outline:1px solid #7aa7d9;
+}
+.sort-list a:last-child{border-bottom:0}
+@media(max-width:920px){
+  .header-main{
+    grid-template-columns:118px 1fr 64px;
+  }
+  .top-deal-btn{
+    justify-self:end;
+    min-height:34px;
+    padding:0 11px;
+    font-size:12px;
+  }
+  .sort-menu{
+    min-width:158px;
+  }
+}
+
+
+.lang-menu{
+  position:relative;
+  justify-self:end;
+  justify-self:start;
+  z-index:1200;
+}
+.lang-menu summary{
+  list-style:none;
+  cursor:pointer;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:4px;
+  min-height:36px;
+  padding:5px 7px;
+  border:1px solid transparent;
+  border-radius:3px;
+  font-size:13px;
+  font-weight:900;
+  user-select:none;
+}
+.lang-menu summary:hover{
+  border-color:rgba(255,255,255,.55);
+}
+.lang-menu summary::-webkit-details-marker{display:none}
+.lang-menu .flag{
+  font-size:18px;
+  line-height:1;
+}
+.lang-menu .arrow{
+  color:#cfd8e3;
+  font-size:11px;
+}
+.lang-list{
+  position:absolute;
+  left:0;
+  top:calc(100% + 6px);
+  width:185px;
+  background:#fff;
+  color:#111;
+  border:1px solid #a6a6a6;
+  border-radius:4px;
+  box-shadow:0 10px 26px rgba(0,0,0,.25);
+  padding:6px 0;
+}
+.lang-list:before{
+  content:"";
+  position:absolute;
+  top:-8px;
+  left:23px;
+  border-left:8px solid transparent;
+  border-right:8px solid transparent;
+  border-bottom:8px solid #fff;
+}
+.lang-list a{
+  display:block;
+  padding:9px 14px;
+  color:#111;
+  font-size:14px;
+  border-bottom:1px solid #eee;
+}
+.lang-list a:hover{
+  background:#f3f3f3;
+  color:#c45500;
+}
+.lang-list a:last-child{
+  border-bottom:0;
+}
+@media(max-width:920px){
+  .header-main{
+    grid-template-columns:118px 1fr 64px;
+  }
+  .lang-menu summary{
+    min-height:32px;
+    padding:4px 5px;
+    font-size:12px;
+  }
+  .lang-menu .flag{
+    font-size:16px;
+  }
+  .lang-list{
+    left:auto;
+    right:0;
+    width:170px;
+  }
+  .lang-list:before{
+    left:auto;
+    right:24px;
+  }
+  .search{
+    grid-column:1 / -1;
+  }
+}
+
+
+@media(min-width:921px){
+  .search{
+    grid-column:auto;
+  }
+  .lang-menu{
+    justify-self:end;
+  }
+}
+
+
+/* Header medium search size */
+@media(min-width:921px){
+  .header-main{
+    justify-content:start;
+  }
+  .search{
+    width:100%;
+    max-width:660px;
+  }
+  .lang-menu{
+    justify-self:start;
+  }
+}
+
+
+/* Saree cards real portrait images */
+.saree-photo{
+  background:#fff;
+  aspect-ratio:4/5;
+}
+.saree-photo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+}
+.product-title{
+  display:block;
+  min-height:42px;
+  overflow:visible;
+}
+@media(max-width:920px){
+  .saree-photo{aspect-ratio:4/5;}
+  .product-title{min-height:auto;}
+}
+
+
+/* Final fix: search visible + custom colour theme, cards unchanged */
+:root{
+  --brand-bg:#0f4c5c;
+  --brand-bg2:#176b7a;
+  --brand-accent:#ff9900;
+  --brand-soft:#e8f7f6;
+  --brand-line:#1aa6a6;
+}
+body{
+  background:#f2fbfa;
+}
+.top-header{
+  background:linear-gradient(90deg,var(--brand-bg),var(--brand-bg2)) !important;
+  border-bottom:3px solid var(--brand-line);
+}
+.sub-header{
+  background:#12606d !important;
+  border-bottom:2px solid var(--brand-line);
+}
+.fashion-tabs{
+  background:#e8f7f6 !important;
+  border-bottom:2px solid var(--brand-line);
+}
+.result-bar{
+  background:#f7ffff !important;
+  border-bottom:2px solid var(--brand-line);
+}
+.footer{
+  background:#0f4c5c !important;
+}
+.sidebar{
+  border:2px solid var(--brand-line);
+  border-radius:8px;
+  padding:10px 12px 20px 10px;
+}
+.search{
+  display:flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  height:40px !important;
+  border:2px solid var(--brand-accent);
+  border-radius:5px;
+  overflow:hidden;
+  background:#fff;
+}
+.search select,
+.search input,
+.search button{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+.search input{
+  display:block !important;
+  flex:1 1 auto !important;
+  min-width:0 !important;
+}
+.search button{
+  display:block !important;
+  width:50px !important;
+  flex:0 0 50px !important;
+  background:var(--brand-accent) !important;
+}
+@media(min-width:921px){
+  .header-main{
+    grid-template-columns:170px 540px 90px !important;
+    justify-content:center !important;
+    column-gap:22px !important;
+  }
+  .search{
+    width:540px !important;
+    max-width:540px !important;
+    min-width:420px !important;
+    justify-self:center !important;
+    grid-column:auto !important;
+  }
+}
+@media(max-width:920px){
+  .search{
+    display:flex !important;
+    grid-column:1 / -1 !important;
+    width:100% !important;
+    max-width:none !important;
+    min-width:0 !important;
+  }
+}
+
+
+
+/* FINAL MOBILE + IMAGE CLEAN FIX */
+html, body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+.product-card{
+  border-color:#d7dde8;
+}
+.product-media{
+  background:#ffffff;
+}
+.landscape{
+  background:#ffffff;
+  border-color:#dde5f0;
+}
+.landscape.banner img,
+.landscape.product img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  background:#ffffff;
+  filter:none;
+}
+.landscape.product:before{
+  background:#294b63;
+}
+.product-title{
+  display:block;
+  overflow:visible;
+  min-height:auto;
+  word-break:normal;
+}
+
+@media(max-width:920px){
+  .top-header{
+    position:sticky;
+    top:0;
+  }
+  .header-main{
+    grid-template-columns:120px 1fr 54px !important;
+    min-height:auto;
+    padding:8px 8px 7px;
+    gap:7px;
+  }
+  .logo{
+    font-size:24px !important;
+    padding-bottom:6px;
+  }
+  .logo:after{
+    height:5px;
+    border-bottom-width:3px;
+    left:3px;
+    right:3px;
+  }
+  .lang-menu{
+    justify-self:end !important;
+  }
+  .search{
+    grid-column:1 / -1 !important;
+    order:2;
+    width:100% !important;
+    max-width:100% !important;
+    height:38px !important;
+    margin:0 auto;
+    border:1px solid rgba(255,255,255,.35);
+  }
+  .search select{
+    width:82px;
+    font-size:11px;
+  }
+  .search input{
+    font-size:13px;
+    padding:0 8px;
+  }
+  .search button{
+    width:44px;
+    font-size:19px;
+  }
+  .sub-inner{
+    padding:6px 7px;
+    gap:5px;
+  }
+  .sub-inner a,
+  .rufus{
+    font-size:12px;
+    padding:6px 7px;
+  }
+  .fashion-tabs-inner{
+    padding:8px;
+  }
+  .fashion-title{
+    font-size:20px;
+    line-height:1.15;
+  }
+  .result-inner{
+    padding:8px;
+    display:block;
+  }
+  .result-count{
+    font-size:12px;
+    margin-bottom:6px;
+  }
+  .page{
+    padding:8px 6px 18px !important;
   }
   .main-head h1{
     font-size:19px;
@@ -877,78 +1333,100 @@ img{display:block;max-width:100%}
   }
 }
 
-:root{
-  --brand-bg:#0f4c5c;
-  --brand-bg2:#176b7a;
-  --brand-accent:#ff9900;
-  --brand-soft:#e8f7f6;
-  --brand-line:#1aa6a6;
+
+/* Mobile top menu auto-run: right to left, hover/focus stops and turns Associate orange */
+.top-marquee-copy{display:none;}
+@keyframes topRightLeft{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
 }
-body{
-  background:#f2fbfa;
-}
-.top-header{
-  background:linear-gradient(90deg,var(--brand-bg),var(--brand-bg2)) !important;
-  border-bottom:3px solid var(--brand-line);
-}
-.sub-header{
-  background:#12606d !important;
-  border-bottom:2px solid var(--brand-line);
-}
-.fashion-tabs{
-  background:#e8f7f6 !important;
-  border-bottom:2px solid var(--brand-line);
-}
-.result-bar{
-  background:#f7ffff !important;
-  border-bottom:2px solid var(--brand-line);
-}
-.footer{
-  background:#0f4c5c !important;
-}
-.sidebar{
-  border:2px solid var(--brand-line);
-  border-radius:8px;
-  padding:10px 12px 20px 10px;
-}
-.search{
-  display:flex !important;
-  visibility:visible !important;
-  opacity:1 !important;
-  height:40px !important;
-  border:2px solid var(--brand-accent);
-  border-radius:5px;
-  overflow:hidden;
-  background:#fff;
-}
-@media(min-width:921px){
-  .header-main{
-    grid-template-columns:170px 540px 90px !important;
-    justify-content:center !important;
-    column-gap:22px !important;
+@media(max-width:920px){
+  .sub-header{
+    overflow:hidden !important;
   }
-  .search{
-    width:540px !important;
-    max-width:540px !important;
-    min-width:420px !important;
-    justify-self:center !important;
-    grid-column:auto !important;
+  .sub-inner{
+    max-width:none !important;
+    width:max-content !important;
+    min-width:max-content !important;
+    overflow:visible !important;
+    flex-wrap:nowrap !important;
+    padding:6px 8px !important;
+    gap:8px !important;
+    animation:topRightLeft 24s linear infinite !important;
+    will-change:transform;
+  }
+  .top-marquee-copy{
+    display:contents !important;
+  }
+  .sub-inner:hover,
+  .sub-inner:focus-within,
+  .sub-inner:active{
+    animation-play-state:paused !important;
+  }
+  .sub-inner a:hover,
+  .sub-inner a:focus,
+  .sub-inner a:active{
+    color:#ff9900 !important;
+    background:rgba(255,153,0,.12) !important;
+    outline:none !important;
   }
 }
 
-/* IMAGE ENHANCEMENT EFFECT */
+</style>
+
+
+<style>
+/* V27: realistic image enhancement - no card/link changes */
 .product-media img,
 .landscape.banner img,
 .landscape.product img,
 .saree-photo img{
   opacity:1 !important;
   filter: brightness(1.06) contrast(1.18) saturate(1.22) drop-shadow(0 6px 10px rgba(0,0,0,.12)) !important;
+  image-rendering:auto;
+  backface-visibility:hidden;
+  transform:translateZ(0);
 }
 .saree-photo{
   background:linear-gradient(180deg,#ffffff,#fffaf2) !important;
-  aspect-ratio:4/5 !important;
+}
+.saree-photo img{
+  object-fit:contain !important;
+  object-position:center top !important;
+}
+.landscape{
+  background:#fff !important;
+}
+.product-media{
+  background:#fff !important;
+}
+@media(max-width:920px){
+  .product-media img,
+  .landscape.banner img,
+  .landscape.product img,
+  .saree-photo img{
+    filter: brightness(1.07) contrast(1.2) saturate(1.25) drop-shadow(0 4px 7px rgba(0,0,0,.10)) !important;
+  }
 }
 </style>
+
+
+<style>
+/* JSON CARD MOBILE IMAGE FIX: keep old Amazon-style mobile portrait image area */
+@media(max-width:920px){
+  #productsGrid .landscape.saree-photo{
+    aspect-ratio:4/5 !important;
+    background:#fff !important;
+  }
+  #productsGrid .landscape.saree-photo img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+    object-position:center top !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="top-header">
@@ -956,8 +1434,8 @@ body{
 <a aria-label="Associates deals" class="logo" href="#">Associates</a>
 <form class="search" id="dealSearchForm">
 <select aria-label="Category" id="searchCategory">
-<option value="deals">Deals</option>
-<option value="fashion">Fashion</option>
+<option data-url="https://amzn.openinapp.co/8u4lt" value="deals">Deals</option>
+<option data-url="https://amzn.openinapp.co/up31b" value="fashion">Fashion</option>
 </select>
 <input aria-label="Search" autocomplete="off" id="dealSearchInput" placeholder="Search fashion deals" type="search"/>
 <button aria-label="Search" type="submit">⌕</button>
@@ -966,173 +1444,267 @@ body{
 <summary><span class="flag">🇮🇳</span> IN <span class="arrow">▾</span></summary>
 <div class="lang-list">
         <a href="https://amzn.openinapp.co/1bl5b" target="_blank" rel="nofollow sponsored noopener">India / English</a>
-        <a href="https://amzn.openinapp.co/keo53" target="_blank" rel="nofollow sponsored noopener">Hindi</a>
+        <a href="https://amzn.openinapp.co/keo53" target="_blank" rel="nofollow sponsored noopener">Hindi Belt / हिन्दी</a>
+        <a href="https://amzn.openinapp.co/s7c5k" target="_blank" rel="nofollow sponsored noopener">Tamil Nadu / தமிழ்</a>
+        <a href="https://amzn.openinapp.co/52umz" target="_blank" rel="nofollow sponsored noopener">Telugu States / తెలుగు</a>
+        <a href="https://amzn.openinapp.co/gvplw" target="_blank" rel="nofollow sponsored noopener">Karnataka / ಕನ್ನಡ</a>
+        <a href="https://amzn.openinapp.co/pm7y5" target="_blank" rel="nofollow sponsored noopener">Kerala / മലയാളം</a>
+        <a href="https://amzn.openinapp.co/562yz" target="_blank" rel="nofollow sponsored noopener">West Bengal / বাংলা</a>
+        <a href="https://amzn.openinapp.co/haz5k" target="_blank" rel="nofollow sponsored noopener">Maharashtra / मराठी</a>
       </div>
 </details>
 </div>
-</header>
-
-<div class="page">
-  <aside class="sidebar">
-    <div class="filter-box">
-      <h3>Quick Categories</h3>
-      <a class="side-link" href="https://amzn.openinapp.co/8u4lt" target="_blank" rel="nofollow sponsored noopener">Today's Deals</a>
-      <a class="side-link" href="https://amzn.openinapp.co/up31b" target="_blank" rel="nofollow sponsored noopener">Fashion Store</a>
-    </div>
-  </aside>
-
-  <main class="main-content">
-    <div class="main-head">
-      <h1>Top Trending Deals</h1>
-      <p>Handpicked best deals for you</p>
-    </div>
-
-    <!-- UI CARDS GENERATE HONE KI JAGAH -->
-    <div class="products" id="productsGrid"></div>
-  </main>
+<nav class="sub-header">
+<div class="sub-inner">
+<a href="#">☰ All</a>
+<a href="https://amzn.openinapp.co/8u4lt" rel="nofollow sponsored noopener" target="_blank">Today’s Deals</a>
+<a href="https://amzn.openinapp.co/up31b" rel="nofollow sponsored noopener" target="_blank">Fashion</a>
+<a href="https://amzn.openinapp.co/04u2o" rel="nofollow sponsored noopener" target="_blank">Sunglasses</a>
+<a href="https://amzn.openinapp.co/b5mdk" rel="nofollow sponsored noopener" target="_blank">Starting at ₹399</a>
+<a href="https://amzn.openinapp.co/wqxa6" rel="nofollow sponsored noopener" target="_blank">Apparel and Accessories for Women</a>
+<a href="https://amzn.openinapp.co/ur8ba" rel="nofollow sponsored noopener" target="_blank">Bestsellers</a>
+<a href="https://amzn.openinapp.co/cuwv1" rel="nofollow sponsored noopener" target="_blank">Member Benefits</a>
+<span class="top-marquee-copy" aria-hidden="true">
+<a href="#">☰ All</a>
+<a href="https://amzn.openinapp.co/8u4lt" rel="nofollow sponsored noopener" target="_blank">Today’s Deals</a>
+<a href="https://amzn.openinapp.co/up31b" rel="nofollow sponsored noopener" target="_blank">Fashion</a>
+<a href="https://amzn.openinapp.co/04u2o" rel="nofollow sponsored noopener" target="_blank">Sunglasses</a>
+<a href="https://amzn.openinapp.co/b5mdk" rel="nofollow sponsored noopener" target="_blank">Starting at ₹399</a>
+<a href="https://amzn.openinapp.co/wqxa6" rel="nofollow sponsored noopener" target="_blank">Apparel and Accessories for Women</a>
+<a href="https://amzn.openinapp.co/ur8ba" rel="nofollow sponsored noopener" target="_blank">Bestsellers</a>
+<a href="https://amzn.openinapp.co/cuwv1" rel="nofollow sponsored noopener" target="_blank">Member Benefits</a>
+</span>
 </div>
-
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="disclosure">
-      <strong>Affiliate Disclosure:</strong> As an associate, we earn from qualifying purchases. Prices and availability are subject to change.
-    </div>
+</nav>
+</header>
+<section class="fashion-tabs">
+<div class="fashion-tabs-inner">
+<div class="fashion-title">Associates</div>
+</div>
+</section>
+<section class="result-bar">
+<div class="result-inner">
+<div class="result-count">1-10 of over 10,000 results for <strong>Fashion Deals</strong></div>
+<details class="sort-menu">
+<summary>Sort by: Featured <span>▾</span></summary>
+<div class="sort-list">
+<a href="#deals">Featured</a>
+<a href="https://amzn.openinapp.co/n4sc3" rel="nofollow sponsored noopener" target="_blank">Newest Arrivals</a>
+<a href="https://amzn.openinapp.co/ur8ba" rel="nofollow sponsored noopener" target="_blank">Best Sellers</a>
+</div>
+</details>
+</div>
+</section>
+<div class="page">
+<aside class="sidebar">
+<div class="filter-box">
+<h3>Deal Links</h3>
+<a class="side-link" href="https://amzn.openinapp.co/8u4lt" rel="nofollow sponsored noopener" target="_blank">Today’s Deals</a>
+<a class="side-link" href="https://amzn.openinapp.co/up31b" rel="nofollow sponsored noopener" target="_blank">Fashion Deals</a>
+  <a class="side-link" href="saree-fashion-deals.html">Saree &amp; Fashion Deals</a>
+<a class="side-link" href="https://amzn.openinapp.co/a3n8l" rel="nofollow sponsored noopener" target="_blank">Denim &amp; Classic Jeans Deals</a>
+<a class="side-link" href="https://amzn.openinapp.co/b5mdk" rel="nofollow sponsored noopener" target="_blank">Starting at ₹399</a>
+<a class="side-link" href="https://amzn.openinapp.co/04u2o" rel="nofollow sponsored noopener" target="_blank">Sunglasses Deals</a>
+<a class="side-link" href="https://amzn.openinapp.co/4712m" rel="nofollow sponsored noopener" target="_blank">Selected Fashion Product</a>
+<a class="side-link" href="https://amzn.openinapp.co/ur8ba" rel="nofollow sponsored noopener" target="_blank">Bestsellers</a>
+<a class="side-link" href="https://amzn.openinapp.co/cuwv1" rel="nofollow sponsored noopener" target="_blank">Member Benefits</a>
+<a class="side-link" href="https://amzn.openinapp.co/wqxa6" rel="nofollow sponsored noopener" target="_blank">Apparel and Accessories for Women</a>
+<a class="side-promo-link" href="https://amzn.openinapp.co/8cm77" rel="nofollow sponsored noopener" target="_blank">Bulk discounts + 10% guaranteed cashback !</a>
+<a class="business-benefit-card" href="https://amzn.openinapp.co/8cm77" target="_blank" rel="nofollow sponsored noopener" aria-label="Open business purchase benefits page">
+  <div class="business-title">Business Purchase Benefits</div>
+  <div class="business-line"></div>
+  <p class="business-text">One-stop destination for business needs, GST input credit, business pricing, bulk discounts, delivery and easy returns.</p>
+  <div class="business-benefits">
+    <div class="business-benefit-row"><span class="business-icon">%</span><span>GST Invoice</span></div>
+    <div class="business-benefit-row"><span class="business-icon">₹</span><span>Business Pricing &amp; Bulk Discounts</span></div>
+    <div class="business-benefit-row"><span class="business-icon">🚚</span><span>Fast, Reliable Shipping</span></div>
+    <div class="business-benefit-row"><span class="business-icon">↩</span><span>Easy Returns and Replacements</span></div>
   </div>
-</footer>
-
-<!-- 🚀 THE ULTIMATE UNIFIED RENDERER & SCHEMA SCRIPT -->
+  <div class="business-feature">
+    <strong>Business Features</strong>
+    Save up to 28% by claiming GST input tax credit. Shop from business account and receive exclusive price and bulk discounts on lakhs of products.
+  </div>
+  <div class="business-cta">Explore Business Benefits</div>
+</a>
+</div>
+</aside>
+<main class="main-content" id="deals">
+<div class="mobile-filter">
+<a href="https://amzn.openinapp.co/8u4lt" rel="nofollow sponsored noopener" target="_blank">Today’s Deals</a>
+<a href="https://amzn.openinapp.co/up31b" rel="nofollow sponsored noopener" target="_blank">Fashion</a>
+<a href="https://amzn.openinapp.co/a3n8l" rel="nofollow sponsored noopener" target="_blank">Denim</a>
+<a href="https://amzn.openinapp.co/04u2o" rel="nofollow sponsored noopener" target="_blank">Sunglasses</a>
+<a href="https://amzn.openinapp.co/b5mdk" rel="nofollow sponsored noopener" target="_blank">Starting at ₹399</a>
+<a href="https://amzn.openinapp.co/wqxa6" rel="nofollow sponsored noopener" target="_blank">Apparel and Accessories for Women</a>
+</div>
+<div class="main-head">
+<div>
+<h1>Results</h1>
+<p>Check each product page for other buying options. Price and other details may vary based on product size and colour.</p>
+</div>
+</div>
+<section class="products" id="productsGrid">
+<!-- Product cards will load from products.json. Card design/classes remain unchanged. -->
+</section>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    fetch('products.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("HTTP error! status: " + response.status);
-            }
-            return response.json();
-        })
-        .then(products => {
-            const productsGrid = document.getElementById('productsGrid');
-            const schemaGraph = [];
+(function(){
+  const grid = document.getElementById('productsGrid');
+  if(!grid) return;
 
-            if (!productsGrid) return;
-            productsGrid.innerHTML = ""; // Container clear karna
+  const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, function(ch){
+    return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'})[ch];
+  });
 
-            products.forEach(p => {
-                // ------ 1. VISUAL UI CARD RENDERING ENGINE ------
-                // Saree products ke liye portrait ration select karna (.saree-photo)
-                const isSaree = p.title && p.title.toLowerCase().includes('saree');
-                const imageAreaClass = isSaree ? 'landscape saree-photo' : 'landscape product';
+  const renderBadges = (badges) => (badges || []).map(function(badge, index){
+    const cls = index === 1 ? 'badge orange' : 'badge';
+    return '<span class="' + cls + '">' + escapeHtml(badge) + '</span>';
+  }).join('');
 
-                // Badges rendering logic
-                let badgesHtml = '';
-                if (p.badges && Array.isArray(p.badges)) {
-                    p.badges.forEach(b => {
-                        const isOrange = b.toLowerCase().includes('off') || b.toLowerCase().includes('bazaar');
-                        badgesHtml += `<span class="badge ${isOrange ? 'orange' : ''}">${b}</span>`;
-                    });
-                } else if (p.badge) {
-                    badgesHtml += `<span class="badge">${p.badge}</span>`;
-                }
+  const renderSwatches = (swatches) => {
+    const list = swatches && swatches.length ? swatches : ['s1','s2','s3','s4'];
+    return list.map(function(swatch){
+      if(/^#/.test(swatch)){
+        return '<span class="swatch" style="background:' + escapeHtml(swatch) + '"></span>';
+      }
+      return '<span class="swatch ' + escapeHtml(swatch) + '"></span>';
+    }).join('');
+  };
 
-                // Rating generation element
-                let ratingHtml = '';
-                if (p.rating) {
-                    ratingHtml = `
-                        <div class="rating">
-                            ★ ${p.rating} <span>(${p.reviews || '100+'})</span>
-                        </div>
-                    `;
-                }
+  const renderPrice = (item) => {
+    if(!item.price) return '';
+    const mrp = item.mrp ? ' <span class="mrp">M.R.P: <s>' + escapeHtml(item.mrp) + '</s></span>' : '';
+    const rupee = item.priceSymbol === false ? '' : '<span class="rupee">₹</span>';
+    return '<div class="price-line">' + rupee + '<span class="price">' + escapeHtml(item.price) + '</span>' + mrp + '</div>';
+  };
 
-                // MRP aur Discount pricing render logic
-                let mrpHtml = '';
-                if (p.mrp) mrpHtml = `<span class="mrp"><s>₹${p.mrp}</s></span>`;
-                
-                let saveHtml = '';
-                if (p.save) saveHtml = `<span class="save">(${p.save})</span>`;
+  const renderCard = (item, index) => {
+    const title = escapeHtml(item.title || 'Fashion Pick');
+    const link = escapeHtml(item.link || '#');
+    const image = escapeHtml(item.image || '');
+    const rotateImages = Array.isArray(item.images) && item.images.length > 1 ? item.images : [];
+    const rotateAttr = rotateImages.length ? " data-rotate-images='" + escapeHtml(JSON.stringify(rotateImages)) + "'" : "";
+    const imageClass = escapeHtml(item.imageClass || 'landscape saree-photo');
+    const cardId = item.id ? ' id="' + escapeHtml(item.id) + '"' : '';
+    const rating = item.rating ? '<div class="rating">' + escapeHtml(item.rating) + (item.reviews ? ' <span>' + escapeHtml(item.reviews) + '</span>' : '') + '</div>' : '';
+    const save = item.save ? '<div class="save">' + escapeHtml(item.save) + '</div>' : '';
+    const prime = item.delivery ? '<div class="prime">' + escapeHtml(item.delivery) + '</div>' : '';
+    const button = escapeHtml(item.button || 'View on Amazon');
+    const loading = index === 0 ? 'eager' : 'lazy';
 
-                // Single Unified Product Card UI Template
-                const cardTemplate = `
-                    <div class="product-card">
-                        <a href="${p.link}" target="_blank" rel="nofollow sponsored noopener" class="product-media">
-                            <div class="${imageAreaClass}">
-                                <img src="${p.image}" alt="${p.title}" loading="lazy" />
-                            </div>
-                        </a>
-                        <div class="product-info">
-                            <div class="badges">${badgesHtml}</div>
-                            <a href="${p.link}" target="_blank" rel="nofollow sponsored noopener">
-                                <h4 class="product-title">${p.title}</h4>
-                            </a>
-                            ${ratingHtml}
-                            <div class="price-line">
-                                <span class="rupee">₹</span><span class="price">${p.price}</span>
-                                ${mrpHtml}
-                                ${saveHtml}
-                            </div>
-                            <a href="${p.link}" target="_blank" rel="nofollow sponsored noopener" class="shop-btn">
-                                Shop Now
-                            </a>
-                        </div>
-                    </div>
-                `;
-                
-                // Card ko live grid ke andar push karna
-                productsGrid.innerHTML += cardTemplate;
+    return `
+<article class="product-card"${cardId}>
+  <a class="product-media" href="${link}" rel="nofollow sponsored noopener" target="_blank">
+    <div class="${imageClass}">
+      <img alt="${title}" loading="${loading}" src="${image}"${rotateAttr}>
+    </div>
+  </a>
+  <div class="swatches">${renderSwatches(item.swatches)}</div>
+  <div class="product-info">
+    <div class="badges">${renderBadges(item.badges)}</div>
+    <a class="product-title" href="${link}" rel="nofollow sponsored noopener" target="_blank">${title}</a>
+    ${rating}
+    ${renderPrice(item)}
+    ${save}
+    ${prime}
+    <a class="shop-btn" href="${link}" rel="nofollow sponsored noopener" target="_blank">${button}</a>
+  </div>
+</article>`;
+  };
 
-                // ------ 2. AUTOMATIC DYNAMIC GOOGLE SCHEMA ENGINE ------
-                let cleanPrice = "0.00";
-                if (p.price) {
-                    cleanPrice = p.price.toString().replace(/[^0-9.]/g, '');
-                }
+  fetch('products.json', {cache:'no-store'})
+    .then(function(response){
+      if(!response.ok) throw new Error('products.json not found');
+      return response.json();
+    })
+    .then(function(products){
+      grid.innerHTML = (products || []).map(renderCard).join('');
+      grid.querySelectorAll("img[data-rotate-images]").forEach(function(img){
+        let images = [];
+        try {
+          images = JSON.parse(img.getAttribute("data-rotate-images") || "[]");
+        } catch(e) {
+          images = [];
+        }
+        if (!images || images.length < 2) return;
+        let current = 0;
+        setInterval(function(){
+          current = (current + 1) % images.length;
+          img.src = images[current];
+        }, 2500);
+      });
+    })
+    .catch(function(error){
+      console.error('Products load error:', error);
+      grid.innerHTML = '<div class="notice">Products load nahi hua. Local test ke liye folder me <strong>python -m http.server 8000</strong> chala kar <strong>http://localhost:8000</strong> open karein.</div>';
+    });
+})();
+</script>
+<div class="brand-strip">
+<div class="brand-track">
+<a href="https://amzn.openinapp.co/a3n8l" rel="nofollow sponsored noopener" target="_blank">Levi’s Deals</a><a href="https://amzn.openinapp.co/a3n8l" rel="nofollow sponsored noopener" target="_blank">Pepe Jeans</a><a href="https://amzn.openinapp.co/a3n8l" rel="nofollow sponsored noopener" target="_blank">Denim Offers</a><a href="https://amzn.openinapp.co/04u2o" rel="nofollow sponsored noopener" target="_blank">Sunglasses</a><a href="https://amzn.openinapp.co/b5mdk" rel="nofollow sponsored noopener" target="_blank">Starting at ₹399</a><a href="https://amzn.openinapp.co/up31b" rel="nofollow sponsored noopener" target="_blank">Fashion Sale</a><a href="https://amzn.openinapp.co/wqxa6" rel="nofollow sponsored noopener" target="_blank">Apparel and Accessories for Women</a>
+<a href="https://amzn.openinapp.co/a3n8l" rel="nofollow sponsored noopener" target="_blank">Levi’s Deals</a><a href="https://amzn.openinapp.co/a3n8l" rel="nofollow sponsored noopener" target="_blank">Pepe Jeans</a><a href="https://amzn.openinapp.co/a3n8l" rel="nofollow sponsored noopener" target="_blank">Denim Offers</a><a href="https://amzn.openinapp.co/04u2o" rel="nofollow sponsored noopener" target="_blank">Sunglasses</a><a href="https://amzn.openinapp.co/b5mdk" rel="nofollow sponsored noopener" target="_blank">Starting at ₹399</a><a href="https://amzn.openinapp.co/up31b" rel="nofollow sponsored noopener" target="_blank">Fashion Sale</a><a href="https://amzn.openinapp.co/wqxa6" rel="nofollow sponsored noopener" target="_blank">Apparel and Accessories for Women</a>
+</div>
+</div>
+</main>
+</div>
+<footer class="footer">
+<div class="footer-inner">
+<div class="disclosure">
+<strong>Affiliate Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases. This page may contain affiliate links. We may earn a commission at no extra cost to you. Final price, discount, availability, coupons, delivery and eligibility depend on partner-store terms. This is an independent affiliate deals page and not an official store website.
+    </div>
+</div>
+</footer>
+<script>
+const mainAffiliateLink = "https://amzn.openinapp.co/1bl5b";
+const keywordLinks = [
+  { keys: ["today", "today deal", "today deals", "deal", "deals", "sale"], url: "https://amzn.openinapp.co/8u4lt" },
+  { keys: ["fashion", "clothing", "shirt", "shirts", "apparel"], url: "https://amzn.openinapp.co/up31b" },
+  { keys: ["denim", "jeans", "classic jeans"], url: "https://amzn.openinapp.co/a3n8l" },
+  { keys: ["sunglass", "sunglasses", "eyewear", "goggles"], url: "https://amzn.openinapp.co/04u2o" },
+  { keys: ["new", "new arrival", "new arrivals", "newest", "newest arrivals", "launch", "launches", "starting"], url: "https://amzn.openinapp.co/b5mdk" },
+  { keys: ["best", "best seller", "best sellers", "bestseller", "bestsellers"], url: "https://amzn.openinapp.co/ur8ba" },
+  { keys: ["bulk", "cashback", "business", "discount"], url: "https://amzn.openinapp.co/8cm77" },
+  { keys: ["breakout", "brands", "brand"], url: "https://amzn.openinapp.co/tnv5t" },
+  { keys: ["chiffon", "ceffon", "saree chiffon"], url: "https://amzn.openinapp.co/ct18p" },
+  { keys: ["georgette", "saree georgette"], url: "https://amzn.openinapp.co/pnrqj" },
+  { keys: ["tissue", "tissue saree", "latest design"], url: "https://amzn.openinapp.co/vjmsy" },
+  { keys: ["mul", "mul saree", "handloom"], url: "https://amzn.openinapp.co/qtl3m" }
+];
 
-                let finalRating = p.rating || "4.5";
-                let finalReviews = p.reviews || "50";
-                let currentBrand = (p.badges && p.badges.length > 0) ? p.badges[0] : "Associates Store";
+const searchForm = document.getElementById("dealSearchForm");
+const searchInput = document.getElementById("dealSearchInput");
 
-                const singleProductSchema = {
-                    "@type": "Product",
-                    "name": p.title,
-                    "image": [p.image],
-                    "description": p.save || "Exclusive fashion pick on trending deal price.",
-                    "brand": {
-                        "@type": "Brand",
-                        "name": currentBrand
-                    },
-                    "offers": {
-                        "@type": "Offer",
-                        "url": p.link,
-                        "priceCurrency": "INR",
-                        "price": cleanPrice,
-                        "availability": "https://schema.org/InStock"
-                    },
-                    "aggregateRating": {
-                        "@type": "AggregateRating",
-                        "ratingValue": finalRating,
-                        "reviewCount": finalReviews
-                    }
-                };
+const searchCategory = document.getElementById("searchCategory");
+if (searchCategory) {
+  searchCategory.addEventListener("change", function() {
+    const selected = searchCategory.options[searchCategory.selectedIndex];
+    const url = selected ? selected.getAttribute("data-url") : "";
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+      searchCategory.selectedIndex = 0;
+    }
+  });
+}
 
-                schemaGraph.push(singleProductSchema);
-            });
+if (searchForm && searchInput) {
+  searchForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const query = (searchInput.value || "").toLowerCase().trim();
 
-            // Head element ke andar global context graph schema load karna
-            const fullSEOStructure = {
-                "@context": "https://schema.org",
-                "@graph": schemaGraph
-            };
+    let target = mainAffiliateLink;
 
-            const seoScriptTag = document.createElement('script');
-            seoScriptTag.type = 'application/ld+json';
-            seoScriptTag.text = JSON.stringify(fullSEOStructure, null, 2);
-            document.head.appendChild(seoScriptTag);
+    if (query) {
+      for (const item of keywordLinks) {
+        if (item.keys.some(key => query.includes(key))) {
+          target = item.url;
+          break;
+        }
+      }
+    }
 
-            console.log("[🎯 Complete Success] UI Rendered and Google SEO Schema generated safely for " + products.length + " products!");
-        })
-        .catch(err => {
-            console.error("[💥 Error] Sahi mapping ya loading me dikkat aayi hai: ", err);
-        });
-});
+    window.open(target, "_blank", "noopener,noreferrer");
+  });
+}
 </script>
 </body>
 </html>
