@@ -1706,5 +1706,71 @@ if (searchForm && searchInput) {
   });
 }
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    fetch('products.json')
+        .then(response => {
+            if (!response.ok) throw new Error("JSON load nahi ho payi");
+            return response.json();
+        })
+        .then(products => {
+            const schemaGraph = [];
+
+            products.forEach(p => {
+                // Price me se rupee symbol ya comma hatakar clean number banane ke liye
+                let cleanPrice = "0.00";
+                if (p.price) {
+                    cleanPrice = p.price.toString().replace(/[^0-9.]/g, '');
+                }
+
+                // Har ek product ka schema data structure
+                const singleProductSchema = {
+                    "@type": "Product",
+                    "name": p.title || "Fashion Product",
+                    "image": [p.image || ""],
+                    "description": p.save || p.title || "Exclusive fashion pick on trending deal price.",
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Associates Store"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "url": p.link || "",
+                        "priceCurrency": "INR",
+                        "price": cleanPrice,
+                        "availability": "https://schema.org/InStock"
+                    }
+                };
+
+                // Agar aapke JSON me rating hai toh usko bhi jodh dega
+                if (p.rating) {
+                    singleProductSchema.aggregateRating = {
+                        "@type": "AggregateRating",
+                        "ratingValue": p.rating,
+                        "reviewCount": p.reviews || "100"
+                    };
+                }
+
+                schemaGraph.push(singleProductSchema);
+            });
+
+            // Sabhi products ka ek final graph banakar head me insert karna
+            const fullSEOStructure = {
+                "@context": "https://schema.org",
+                "@graph": schemaGraph
+            };
+
+            const seoScriptTag = document.createElement('script');
+            seoScriptTag.type = 'application/ld+json';
+            seoScriptTag.text = JSON.stringify(fullSEOStructure, null, 2);
+            document.head.appendChild(seoScriptTag);
+
+            console.log("✅ Google Schema safely created for " + products.length + " products without touching UI!");
+        })
+        .catch(err => {
+            console.log("Schema error (Aapki UI bilkul safe hai):", err);
+        });
+});
+</script>
 </body>
 </html>
